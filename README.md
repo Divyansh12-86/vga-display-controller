@@ -73,13 +73,13 @@ Next, compile and simulate the hardware controller to generate the raw video sig
 1. Using your preferred Verilog simulator, compile and run the testbench (`tb_display_controller.v`) along with the main module (`display_controller.v`).
 2. Running the simulation will process an entire 16.8ms video frame (over 400,000 clock cycles) and output a large text file named `vga_signals.txt`. 
 
-   *Note: Ensure that the generated `vga_signals.txt` file is placed in the `scripts/` directory (or update the file path in `displayemu.py`) before proceeding to the next step.*
+   *Note: Ensure that the generated `vga_signals.txt` file is placed in the `scripts/` directory (or update the file path in `display_emulator.py`) before proceeding to the next step.*
 
 ### Step 3: Display Emulation (Python)
 Finally, run the virtual monitor to visualize the hardware's output.
 1. Open your terminal and navigate to the `scripts/` directory.
 2. Run the emulator script:
 
-        python displayemu.py
+        python display_emulator.py
 
    *A Pygame window will open and draw the image pixel-by-pixel, simulating exactly how a physical VGA monitor would interpret the hardware signals.*
